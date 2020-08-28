@@ -13,7 +13,7 @@ function App() {
           value="This content will always face you."
           look-at="[gps-camera]"
           scale="120 120 120"
-          gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;"
+          gps-entity-place="latitude: 32.898646; longitude: -96.653094;"
         ></a-text>
         <a-camera gps-camera rotation-reader> </a-camera>
       </a-scene>
