@@ -4,19 +4,30 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <a-scene
-        vr-mode-ui="enabled: false"
-        embedded
-        arjs="sourceType: webcam; debugUIEnabled: false;"
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+   
+    <a-nft
+      type="nft"
+      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <a-entity
+        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        scale="5 5 5"
+        position="50 150 0"
       >
-        <a-text
-          value="This content will always face you."
-          look-at="[gps-camera]"
-          scale="120 120 120"
-          gps-entity-place="latitude: 32.898342; longitude: -96.6538096;"
-        ></a-text>
-        <a-camera gps-camera rotation-reader> </a-camera>
-      </a-scene>
+      </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
     </div>
   );
 }
