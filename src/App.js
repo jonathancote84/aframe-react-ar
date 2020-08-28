@@ -5,10 +5,11 @@ function App() {
   return (
     <div className="App">
   <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    background="color: #FAFAFA"
+    // vr-mode-ui="enabled: false;"
+    // renderer="logarithmicDepthBuffer: true;"
+    // embedded
+    // arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
    
 
@@ -19,7 +20,7 @@ function App() {
       >
       </a-entity>
 
-    <a-entity camera></a-entity>
+    {/* <a-entity camera></a-entity> */}
   </a-scene>
     </div>
   );
