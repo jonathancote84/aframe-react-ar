@@ -2,25 +2,19 @@ import React from 'react';
 
 
 function App() {
+  const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+  console.log(distanceMsg);   
   return (
     <div className="App">
   <a-scene
-    background="color: #FAFAFA"
-    // vr-mode-ui="enabled: false;"
-    // renderer="logarithmicDepthBuffer: true;"
-    // embedded
-    // arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    // background="color: #FAFAFA"
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-   
-
-      <a-entity
-        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        scale="5 5 5"
-        position="50 150 0"
-      >
-      </a-entity>
-
-    {/* <a-entity camera></a-entity> */}
+    <a-box material="color: yellow" gps-entity-place="latitude: 32.8990834; longitude: -96.6528592" position="0 30 0"/>
+    <a-camera gps-camera rotation-reader></a-camera>
   </a-scene>
     </div>
   );
